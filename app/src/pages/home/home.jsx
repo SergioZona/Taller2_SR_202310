@@ -3,10 +3,11 @@ import CardPlaces from './component/card/cardPlaces'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "./home.css"
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 function Home() {
+    const { id } = useParams();
     return (
         <div>
             <Row className="d-flex justify-content-between align-items-center encabezado">
