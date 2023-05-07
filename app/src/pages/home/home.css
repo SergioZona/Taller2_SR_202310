@@ -69,3 +69,9 @@ h1 {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
+.no-recomendations {
+    color: #fff;
+    text-align: center;
+    font-size: large;
+}
