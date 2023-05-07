@@ -2,7 +2,7 @@ import React from 'react'
 import "./cardPlaces.css"
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import HoverRating from './raiting/hoverRaiting';
+import HoverRating from '../raiting/hoverRaiting';
 
 
 function CardPlaces() {
@@ -24,7 +24,6 @@ function CardPlaces() {
                     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
                     <HoverRating />
                     <Card.Link href="#">Another Link</Card.Link>
                 </Card.Body>

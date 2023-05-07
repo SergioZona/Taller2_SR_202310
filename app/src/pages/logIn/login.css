@@ -31,7 +31,7 @@
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     cursor: pointer;
-    *margin-left: .3em;
+    margin-left: .3em;
 }
 
 .btn:hover,
@@ -110,14 +110,8 @@
     box-sizing: border-box;
 }
 
-html {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
 
 body {
-    width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     background: #092756;
@@ -143,11 +137,13 @@ body {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
     text-align: center;
+    margin-bottom: 35px;
+
 }
 
 input {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
     background: rgba(0, 0, 0, 0.3);
     border: none;
     outline: none;

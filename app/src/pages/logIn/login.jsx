@@ -9,9 +9,8 @@ function Login() {
         <div className="login">
             <h1>Login</h1>
             <form method="post">
-                <input type="text" name="u" placeholder="Username" required="required" />
-                <input type="password" name="p" placeholder="Password" required="required" />
-
+                <input type="text" name="user" placeholder="Username" required="required" />
+                <input type="password" name="password" placeholder="Password" required="required" />
                 <Link to="/home" className="btn btn-primary btn-block btn-large">
                     Let me in.</Link>
             </form>
