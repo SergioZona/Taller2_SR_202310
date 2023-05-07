@@ -1,10 +1,11 @@
-import Login from './pages/logIn/login';
-
+import { BrowserRouter } from 'react-router-dom';
+import CreateRoutes from './routes/routes';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <BrowserRouter>
+      <CreateRoutes />
+    </BrowserRouter>
   );
 }
 

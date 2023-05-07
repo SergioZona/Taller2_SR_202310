@@ -5,27 +5,26 @@
 }
 
 :root {
-    --card-height: 65vh;
-    --card-width: calc(var(--card-height) / 1.5);
+    /* --cardPlaces-height: 5vh; */
+    --cardPlaces-width: 18rem;
 }
 
 
 body {
     min-height: 100vh;
-    background: #212534;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    /* display: flex; */
+    /* align-items: center;
+    flex-direction: column; */
+    padding-left: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
 }
 
 
-.card {
+.cardPlaces {
     background: #191c29;
-    width: var(--card-width);
-    height: var(--card-height);
+    width: var(--cardPlaces-width);
     padding: 3px;
     position: relative;
     border-radius: 6px;
@@ -33,25 +32,23 @@ body {
     align-items: center;
     text-align: center;
     display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
+    margin-bottom: 20px;
+    /* color: rgb(88 199 250 / 0%); */
 }
 
-.card:hover {
+.cardPlaces:hover {
     color: rgb(88 199 250 / 100%);
     transition: color 1s;
 }
 
-.card:hover:before,
-.card:hover:after {
+.cardPlaces:hover:before,
+.cardPlaces:hover:after {
     animation: none;
     opacity: 0;
 }
 
 
-.card::before {
+.cardPlaces::before {
     content: "";
     width: 104%;
     height: 102%;
@@ -64,10 +61,9 @@ body {
     animation: spin 2.5s linear infinite;
 }
 
-.card::after {
+.cardPlaces::after {
     position: absolute;
     content: "";
-    top: calc(var(--card-height) / 6);
     left: 0;
     right: 0;
     z-index: -1;
@@ -75,7 +71,6 @@ body {
     width: 100%;
     margin: 0 auto;
     transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
     background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
     opacity: 1;
     transition: opacity .5s;
@@ -90,12 +85,4 @@ body {
     100% {
         --rotate: 360deg;
     }
-}
-
-a {
-    color: #212534;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-top: 2rem;
 }
