@@ -2,7 +2,6 @@ import React from 'react'
 import "./cardPlaces.css"
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import HoverRating from '../raiting/hoverRaiting';
 import { useNavigate } from 'react-router-dom';
 
 
