@@ -15,7 +15,7 @@ function Login() {
         e.preventDefault();
         // eslint-disable-next-line eqeqeq
         if (username == password) {
-            navigate(`/${username}/home`);
+            navigate(`/${username}/lugares`);
         } else {
             setError('Invalid username or password');
         }

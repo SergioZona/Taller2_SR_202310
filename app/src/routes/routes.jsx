@@ -6,7 +6,8 @@ import Login from "../pages/logIn/login";
 const CreateRoutes = () => (
     <Routes>
         <Route exact path="/" element={<Login />} />
-        <Route exact path="/:id/home" element={<Home />} />
+        <Route exact path="/:id/lugares" element={<Home title='Lugares' />} />
+        <Route exact path="/:id/recomendaciones" element={<Home title='Mis recomendaciones' />} />
     </Routes>
 );
 

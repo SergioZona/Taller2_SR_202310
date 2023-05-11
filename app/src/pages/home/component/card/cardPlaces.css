@@ -12,6 +12,12 @@
 
 body {
     min-height: 100vh;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.body {
+    min-height: 100vh;
     padding-left: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
