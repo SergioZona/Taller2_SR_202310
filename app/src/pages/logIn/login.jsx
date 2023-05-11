@@ -26,10 +26,10 @@ function Login() {
             <h1>Login</h1>
             <form method="post" onSubmit={handleLogin}>
                 {error && <div className="error">{error}</div>}
-                <input type="number" name="user" placeholder="Username" required onChange={(e) => setUsername(e.target.value)} />
-                <input type="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
+                <input type="" name="user" placeholder="Usuario" required onChange={(e) => setUsername(e.target.value)} />
+                <input type="password" name="password" placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} required />
                 <button type="submit" className="btn btn-primary btn-block btn-large">
-                    Let me in.</button>
+                    Ingresar</button>
             </form>
 
         </div>
