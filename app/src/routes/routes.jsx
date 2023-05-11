@@ -9,8 +9,8 @@ const CreateRoutes = () => (
         <Route exact path="/" element={<Login />} />
         <Route exact path="/:id/lugares" element={<Home title='Lugares' />} />
         <Route exact path="/:id/recomendaciones" element={<Home title='Mis recomendaciones' />} />
-        <Route exact path="/:id/:idBussiness/comentarios" element={<DetailCard comentarios={false} />} />
-        <Route exact path="/:id/:idBussiness/calificacion" element={<DetailCard comentarios={true} />} />
+        <Route exact path="/:id/:idBussiness/comentarios" element={<DetailCard comentarios={true} />} />
+        <Route exact path="/:id/:idBussiness/calificacion" element={<DetailCard comentarios={false} />} />
 
     </Routes>
 );

@@ -25,8 +25,8 @@ function CardPlaces(props) {
                 </ListGroup>
                 <Card.Body>
                     {/* <HoverRating /> */}
-                    <Card.Link onClick={() => navigate(`/${props.id}/${props.idBussiness}/comentarios`)}>Calificar</Card.Link>
-                    <Card.Link onClick={() => navigate(`/${props.id}/${props.idBussiness}/calificacion`)}>Ver Comentarios</Card.Link>
+                    <Card.Link onClick={() => navigate(`/${props.id}/${props.idBussiness}/calificacion`)}>Calificar</Card.Link>
+                    <Card.Link onClick={() => navigate(`/${props.id}/${props.idBussiness}/comentarios`)}>Ver Comentarios</Card.Link>
                 </Card.Body>
             </Card>
 

@@ -1,31 +1,29 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom';
-import Comentarios from './components/comentarios';
-import Calificaciones from './components/calificaciones';
+import Comentarios from './components/comentarios/comentarios';
+import Calificaciones from './components/calificaciones/calificaciones';
 
-function DetailCard(comentarios) {
-    const [show, setShow] = useState(true);
+function DetailCard(props) {
     const navigate = useNavigate();
     const { id } = useParams();
-    const handleClose = () => setShow(false);
+
     return (
-        <div><Modal show={show} onHide={handleClose}>
+        <div><Modal show={true} onHide={() => navigate(-1)}>
             <Modal.Header closeButton>
-                <Modal.Title>Calificacion</Modal.Title>
+                <Modal.Title>
+                    {props.comentarios ? "Comentarios" : "Calificaciones"}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-
-                {comentarios ? <Calificaciones /> : <Calificaciones
-                />}
+                {props.comentarios ? <Comentarios /> : <Calificaciones />}
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={() => navigate(`/${id}/recomendaciones`)}>
-                    Close
+                <Button variant="secondary" onClick={() => navigate(-1)}>
+                    Cerrar
                 </Button>
-                {comentarios ?
-                    <Button variant="primary" onClick={() => navigate(`/${id}/recomendaciones`)}>
-                        Save Changes
+                {!props.comentarios ?
+                    <Button variant="primary" onClick={() => navigate(-1)}>
+                        Guardar
                     </Button> : <div></div>}
             </Modal.Footer>
         </Modal></div>

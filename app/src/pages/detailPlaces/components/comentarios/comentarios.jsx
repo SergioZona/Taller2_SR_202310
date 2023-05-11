@@ -11,7 +11,6 @@ function Comentarios() {
         <div>  <ListGroup className="list-group-flush">
             {list.length > 0 ? list.map((l, index) => {
                 return (
-
                     <ListGroup.Item key={index}>
                         <div style={{ textAlign: "right", fontSize: "12px", color: "gray" }}> {l.date}</div>
                         {l.text}</ListGroup.Item>

@@ -10,6 +10,7 @@ import NavBar from '../navbar/navbar';
 function Home(props) {
     const listExample = [
         { "business_id": "Pns2l4eNsfO8kk83dixA6A", "name": "Abby Rappoport, LAC, CMQ", "address": "1616 Chapala St, Ste 2", "city": "Santa Barbara", "state": "CA", "postal_code": "93101", "latitude": 34.4266787, "longitude": -119.7111968, "stars": 5.0, "review_count": 7, "is_open": 0, "attributes": { "ByAppointmentOnly": "True" }, "categories": "Doctors, Traditional Chinese Medicine, Naturopathic\/Holistic, Acupuncture, Health & Medical, Nutritionists", "hours": null },
+        { "business_id": "mpf3x-BjTdTEA3yCZrAYPw", "name": "The UPS Store", "address": "87 Grasso Plaza Shopping Center", "city": "Affton", "state": "MO", "postal_code": "63123", "latitude": 38.551126, "longitude": -90.335695, "stars": 3.0, "review_count": 15, "is_open": 1, "attributes": { "BusinessAcceptsCreditCards": "True" }, "categories": "Shipping Centers, Local Services, Notaries, Mailbox Centers, Printing Services", "hours": { "Monday": "0:0-0:0", "Tuesday": "8:0-18:30", " Miércoles": "8:0-18:30", "Jueves": "8:0-18:30", "Viernes": "8:0-18:30", "Sábado": "8:0-14:0" } },
         {
             'business_id': 1,
             'name': "jeje",
