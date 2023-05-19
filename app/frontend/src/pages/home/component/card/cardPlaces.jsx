@@ -21,6 +21,8 @@ function CardPlaces(props) {
                 <ListGroup className="list-group-flush">
                     <ListGroup.Item>Calificación: {props.stars}</ListGroup.Item>
                     <ListGroup.Item>Calificado por {props.review_count} personas</ListGroup.Item>
+                    <ListGroup.Item>Propabilidad de que te guste {props.percentage} </ListGroup.Item>
+
                 </ListGroup>
                 <Card.Body>
                     {/* <HoverRating /> */}
