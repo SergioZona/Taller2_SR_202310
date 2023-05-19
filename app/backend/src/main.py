@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
-from sklearn.preprocessing import MinMaxScaler
 from .recommendation_systems import model
 from surprise import dump
 
@@ -203,6 +202,37 @@ async def get_business_by_id(id: str):
     cur.close()
     # Return the data as a JSON response
     return {'data': data}
+
+
+# Friends DataFrame
+@app.get('/api/business/recommendation/{user_id}/{top_business}')
+async def get_recommendations(user_id: str, top_business: int):
+    df_business = await get_business()
+    df_business = df_business["data"]
+    df_business = pd.DataFrame(df_business)
+
+    df_review = await get_review()
+    df_review = df_review["data"]
+    df_review = pd.DataFrame(df_review)
+    df = df_review[['user_id', 'business_id', 'stars']]
+
+    svd = dump.load('data/models/svd.pkl')[1]
+    knn = dump.load('data/models/knn.pkl')[1]
+
+    df_user = await get_user()
+    df_user = df_user["data"]
+    df_user = pd.DataFrame(df_user)
+
+    df_user_friends = df_user.copy()
+    df_user_friends['friends'] = df_user_friends['friends'].str.split(', ')
+
+    if len(df_review)>0:    
+        print("Waiting for predictions...")
+        prediction = await model.get_top_n(svd, knn, df, df_user_friends, df_business, df_review, user_id, top_business)
+        prediction = prediction.to_dict(orient='records')
+        return {'data': prediction}    
+    else:
+        return {'data': []}
 
 """------"""
 """ MAIN """
